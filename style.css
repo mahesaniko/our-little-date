@@ -1,0 +1,373 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+:root {
+    --pink: #f6bfd2;
+    --deep: #b85f83;
+    --pale: #fff4f8;
+    --ink: #70495b;
+    --line: #f0d3df;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 5%, #ffe7f0, transparent 28%),
+        linear-gradient(135deg, #fff8fb, #fce7f0);
+
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+
+    padding: 25px 14px 40px;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+}
+
+
+/* =========================
+   TOPLINE
+========================= */
+
+.topline {
+    text-align: center;
+    font: 700 11px Arial, sans-serif;
+    letter-spacing: 3px;
+    color: #c17b98;
+    margin: 8px 0 18px;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero,
+.section,
+.love-note {
+    background: rgba(255,255,255,0.88);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 12px 35px #bd77931a;
+}
+
+.hero {
+    padding: 35px 22px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.kicker {
+    font: 700 10px Arial, sans-serif;
+    letter-spacing: 2px;
+    color: #c17b98;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 55px);
+    line-height: 1.05;
+    color: var(--deep);
+    margin: 16px 0 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 430px;
+    margin: auto;
+}
+
+.date-pass {
+    display: inline-block;
+    background: #fff0f5;
+    color: #b45c80;
+    border: 1px dashed #e6a9c1;
+    border-radius: 99px;
+    padding: 9px 16px;
+    font: 700 11px Arial, sans-serif;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decoration {
+    position: absolute;
+    color: #f4c4d6;
+    font-size: 48px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.heart-one {
+    top: 15px;
+    left: 15px;
+    transform: rotate(-15deg);
+}
+
+.heart-two {
+    bottom: 15px;
+    right: 15px;
+    transform: rotate(15deg);
+}
+
+
+/* =========================
+   POLAROID PHOTOS
+========================= */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 480px;
+    margin: 30px auto 5px;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 14px;
+    box-shadow: 0 5px 16px #9b60751c;
+    border: 1px solid #f2e4ea;
+    transform: rotate(-3deg);
+}
+
+.polaroid.second {
+    transform: rotate(3deg);
+    margin-top: 18px;
+}
+
+.photo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #fbe0eb;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.polaroid p {
+    font-size: 13px;
+    color: #9c647d;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+    padding: 25px 20px;
+    margin-top: 20px;
+}
+
+.section h2,
+.love-note h2 {
+    text-align: center;
+    color: var(--deep);
+    font-size: 26px;
+    margin-bottom: 7px;
+}
+
+.section-sub {
+    text-align: center;
+    font: 11px Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #bb8199;
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   SCHEDULE TIMELINE
+========================= */
+
+.timeline {
+    display: grid;
+    gap: 12px;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 72px 38px 1fr;
+    gap: 10px;
+    align-items: center;
+
+    background: #fff8fb;
+    border: 1px solid #f5e1e9;
+    border-radius: 16px;
+    padding: 13px;
+}
+
+.time {
+    font: 700 12px Arial, sans-serif;
+    color: #b45c80;
+    text-align: center;
+    background: #fdeaf1;
+    border-radius: 12px;
+    padding: 10px 4px;
+}
+
+.emoji {
+    font-size: 24px;
+    text-align: center;
+}
+
+.event-info h3 {
+    font-size: 16px;
+    color: #87516a;
+    margin-bottom: 5px;
+}
+
+.event-info p {
+    font: 12px/1.5 Arial, sans-serif;
+    color: #9c7787;
+}
+
+
+/* =========================
+   LITTLE MEMORIES
+========================= */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.memory-photo {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px #9b60751c;
+    background: #fde4ee;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.memory-photo img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   LOVE NOTE
+========================= */
+
+.love-note {
+    margin-top: 20px;
+    padding: 30px 22px;
+    text-align: center;
+    background: linear-gradient(145deg, #fff, #fff0f5);
+}
+
+.letter-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.love-note p {
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 440px;
+    margin: auto;
+}
+
+.little-hearts {
+    font-size: 24px;
+    color: #d77fa1;
+    margin-top: 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    font: 11px Arial, sans-serif;
+    color: #b27a91;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: #d77fa1;
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 440px) {
+
+    body {
+        padding: 18px 12px 30px;
+    }
+
+    .hero {
+        padding: 30px 14px;
+    }
+
+    .photo {
+        height: 125px;
+    }
+
+    .photo-grid {
+        gap: 12px;
+    }
+
+    .polaroid {
+        padding: 8px 8px 12px;
+    }
+
+    .event {
+        grid-template-columns: 62px 30px 1fr;
+        gap: 7px;
+        padding: 10px;
+    }
+
+    .event-info h3 {
+        font-size: 14px;
+    }
+
+    .event-info p {
+        font-size: 11px;
+    }
+
+    .section {
+        padding: 22px 13px;
+    }
+
+    .memory-grid {
+        gap: 7px;
+    }
+}
